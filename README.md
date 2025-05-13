@@ -37,8 +37,8 @@
     -   `js/main.js`: Web 界面的前端交互逻辑。
 -   `templates/`: 存放 Flask 的 HTML 模板。
     -   `index.html`: Web 应用的主页面。
--   `indexdir/`: (默认) 存放 Whoosh 生成的索引文件。
--   `tdt3/`: (默认) 存放 TDT3 数据集的目录。
+-   `indexdir/`: (默认) 存放 Whoosh 生成的索引文件。使用python main.py index命令会自动生成
+-   `tdt3/`: (默认) 存放 TDT3 数据集的目录。这个需要用户自己下载
 
 ## 安装与配置
 
