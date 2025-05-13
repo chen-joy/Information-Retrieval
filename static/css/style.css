@@ -1,0 +1,186 @@
+/* 基本样式 */
+body {
+    background-color: #b0c8d8; /* 淡蓝白色背景 */
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #4a5568; /* 深灰蓝色文字 */
+}
+
+/* 搜索结果高亮样式 - 莫兰迪色系 */
+.highlight-phrase {
+    background-color: #d4e3fc;  /* 淡蓝色 - 短语 */
+    border-radius: 3px;
+    padding: 1px 0;
+}
+
+.highlight-term {
+    background-color: #d8e2dc;  /* 莫兰迪绿 - 短语中的单词 */
+    border-radius: 3px;
+    padding: 1px 0;
+}
+
+.highlight-hyphen {
+    background-color: #cbc4d6;  /* 莫兰迪紫 - 连字符词 */
+    border-radius: 3px;
+    padding: 1px 0;
+}
+
+.highlight-free {
+    background-color: #f8edeb;  /* 莫兰迪粉 - 自由词 */
+    border-radius: 3px;
+    padding: 1px 0;
+}
+
+/* 结果卡片样式 */
+.result-card {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(160, 174, 192, 0.1);
+    margin-bottom: 18px;
+    padding: 18px;
+    transition: all 0.25s ease;
+    border-left: 4px solid #6d9dc5; /* 莫兰迪蓝 */
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(160, 174, 192, 0.2);
+    border-left: 4px solid #4a6fa5; /* 深一点的蓝色 */
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e8f0fe;
+    padding-bottom: 8px;
+}
+
+.result-snippet {
+    line-height: 1.7;
+    color: #596475; /* 莫兰迪灰蓝色 */
+}
+
+/* 加载动画 */
+.loader {
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #6d9dc5; /* 莫兰迪蓝 */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 标题区域样式 */
+.header-section {
+    padding: 2rem 0;
+    position: relative;
+    background-color: rgb(238, 242, 243);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(160, 174, 192, 0.08);
+    margin-bottom: 2rem;
+}
+
+.header-section h1 {
+    font-weight: 600;
+    color: #385a7c; /* 深蓝色 */
+}
+
+.header-section h5:first-of-type {
+    font-weight: 500;
+    color: #6d9dc5; /* 莫兰迪蓝 */
+}
+
+.header-section h5:last-of-type {
+    font-weight: 400;
+    color: #8896ab; /* 莫兰迪灰蓝 */
+}
+
+/* 修改主要按钮颜色 */
+.btn-primary {
+    background-color: #6d9dc5; /* 莫兰迪蓝 */
+    border-color: #6d9dc5;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #4a6fa5; /* 深蓝色 */
+    border-color: #4a6fa5;
+}
+
+.btn-warning {
+    background-color: #e9d8a6; /* 莫兰迪黄 */
+    border-color: #e9d8a6;
+    color: #5c5649;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+    background-color: #d6bc81; /* 深一点的莫兰迪黄 */
+    border-color: #d6bc81;
+    color: #4d4942;
+}
+
+/* 卡片样式优化 */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(160, 174, 192, 0.1);
+}
+
+.card-header {
+    background-color: #e8f0fe; /* 淡蓝色背景 */
+    color: #385a7c;
+    border-bottom: 1px solid #d1e2fa;
+    font-weight: 500;
+}
+
+/* 页脚样式 */
+footer {
+    color: #8896ab; /* 莫兰迪灰蓝 */
+    padding-bottom: 2rem;
+}
+
+/* 高亮标签提示样式改进 */
+.list-inline-item {
+    margin-right: 1.2rem;
+}
+
+.list-inline-item .badge {
+    margin-right: 0.3rem;
+}
+
+/* 表单元素样式 */
+.form-control:focus, .form-select:focus {
+    border-color: #6d9dc5; /* 莫兰迪蓝 */
+    box-shadow: 0 0 0 0.25rem rgba(109, 157, 197, 0.25);
+}
+
+/* 搜索状态信息样式 */
+#search-status p {
+    color: #596475;
+}
+
+/* 响应式布局优化 */
+@media (max-width: 768px) {
+    .header-section {
+        padding: 1.5rem 0;
+    }
+    
+    .header-section h1 {
+        font-size: 2rem;
+    }
+}
+
+/* 内容区域与背景形成对比 */
+.container {
+    background-color: #e1e8f1; /* 稍微淡一点的背景 */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(160, 174, 192, 0.15);
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
